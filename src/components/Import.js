@@ -1,11 +1,26 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {
+    Button,
+     Container
+  } from '@material-ui/core'
+  import NewTable from './NewTable'
+  // import { fetchMakes } from'../containers/Import'
 
 const Import = (props) => {
+    useEffect(()=> {
+        console.log(props)
+    })
     // fill out this component
-
     return (
-        <p>Import Component</p>
-    )
-}
+        <NewTable>
+        <Button variant="contained"color="primary" onClick={props.fetchMakes}>Import</Button>
 
-export default Import
+
+        </NewTable>
+      )
+    }
+    export default Import
+      
+      
+        
+
